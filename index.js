@@ -106,11 +106,3 @@ module.exports.post = function(path, headers, parameters) {
 module.exports.put = function(path, headers, parameters) {
     return _free("PUT", path, _auth, headers, parameters);
 };
-
-module.exports.get("ping")
-    .then(function(result) {
-        console.log(result);
-    })
-    .catch(function(result) {
-        console.log(result.result);
-    });
