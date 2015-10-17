@@ -1,0 +1,26 @@
+{
+  "name": "quick-pay",
+  "version": "1.0.0",
+  "description": "An interface for quick-pay",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rainnwind/quick-pay.git"
+  },
+  "author": "Rane Eriksen <re@shipfeed.dk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rainnwind/quick-pay/issues"
+  },
+  "homepage": "https://github.com/Rainnwind/quick-pay",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request": "^2.60.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
