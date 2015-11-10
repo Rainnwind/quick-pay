@@ -46,14 +46,20 @@ module.exports = function(method, path, auth, headers, parameters) {
         _headers["Authorization"] = auth;
 
     var deferred = q.defer();
-    request({
+
+    var _request = {
         url: _url,
         method: method,
         preambleCRLF: true,
         postambleCRLF: true,
         headers: _headers,
         json: _parameters
-    }, function(error, response, result) {
+    };
+
+    if (method === "GET")
+        _request.qs = _parameters;
+
+    request(_request, function(error, response, result) {
         if (!error) {
             if (response.statusCode === 200 ||
                 response.statusCode === 201 ||
